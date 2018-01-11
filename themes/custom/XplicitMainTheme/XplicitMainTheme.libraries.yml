@@ -1,0 +1,21 @@
+global-css:
+  css:
+    theme:
+      css/bootstrap.min.css: {}
+      css/font-awesome.min.css: {}
+      css/animate.css: {}
+      css/owl.carousel.css: {}
+      css/owl.theme.default.css: {}
+      fancybox/fancybox.css: {}
+      css/styles.css: {}
+      css/responsive.css: {}
+global-js:
+  js:
+    https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js: {}
+    https://use.fontawesome.com/99347ac47f.js: {}
+    js/bootstrap.min.js: {}
+    js/owl.carousel.min.js: {}
+    js/jquery.onepagenav.js: {}
+    fancybox/fancybox.js: {}
+    js/jquery.easing.min.js: {}
+    js/main.js: {}

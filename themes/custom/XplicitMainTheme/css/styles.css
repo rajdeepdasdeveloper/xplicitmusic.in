@@ -1,0 +1,366 @@
+@charset "utf-8";
+
+/* CSS Document 
+/* ########################### CUSTOME STYLE ########################## */
+
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|Allerta+Stencil|Anton|Architects+Daughter|Chelsea+Market|Comfortaa|Freckle+Face|Righteous|Rock+Salt|Ruslan+Display');
+html, body{
+	font-family: 'Righteous', cursive;
+}
+.visually-hidden{
+	display: none;
+}
+.outermost{
+	
+}
+
+#header{
+	position:fixed;
+	width:100%;
+	left:0;
+	top:0;
+	z-index:50;
+	
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+}
+#header.solid{
+	background-color:#555;
+	background-image:url(../images/header-background.png);
+	box-shadow: 0 -1px 12px -3px rgba(0, 0, 0, 0.75);
+}
+#header #mainNavigation{
+	text-align:right;
+}
+#header #mainNavigation ul{
+	margin:0;
+	display:inline-block;
+	padding:25px 0 0 0;
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+}
+#header.solid #mainNavigation ul{
+	padding:12px 0 0 0;
+}
+#header #mainNavigation ul li{
+	display:inline-block;
+	list-style:none;
+	margin:0 2px;
+}
+#header #logo{
+	font-weight:bold;
+	padding:20px 0 0 0;
+	font-size:25px;
+	letter-spacing:2px;
+	color:#FFF;
+	
+	-webkit-transition:all .3s ease;
+	-moz-transition:all .3s ease;
+	transition:all .3s ease;
+}
+#header.solid #logo{
+	padding:10px 0 10px 0;
+}
+#header #mainNavigation ul li{
+	position: relative;
+
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+}
+#header #mainNavigation ul li a{
+	padding:7px;
+	display: block;
+	outline: none;
+	opacity: 1;
+	text-decoration:none;
+	text-transform:uppercase;
+	color:#FFF;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	transition: all .5s ease;
+}
+#header #mainNavigation ul li::after{
+    color: #fff;
+    font-size: 32px;
+    height: 30px;
+    left: 0;
+    line-height: 30px;
+    margin: auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 30px;
+    z-index: -1;
+}
+#header #mainNavigation ul li.current::after{
+	font-family: FontAwesome;
+    opacity: 1;
+    -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+#header #mainNavigation ul li.current a{
+	opacity: 0;
+    transform: scale(0);
+}
+#header #mainNavigation ul li#menuHome::after{
+	content:"\f015";
+}
+#header #mainNavigation ul li#menuLatest::after{
+	content:"\f001";
+}
+#header #mainNavigation ul li#menuVideo::after{
+	content:"\f16a";
+}
+#header #mainNavigation ul li#menuAbout::after{
+	content:"\f25b";
+}
+#header #mainNavigation ul li#menuMembers::after{
+	content:"\f0c0";
+	font-size: 23px;
+}
+
+/* Main Content */
+
+#mainContent #banner{
+	position:relative;
+	width:100%;
+	height:675px;
+	overflow:hidden;
+}
+#mainContent #banner .slide{
+	position:relative;
+	width:100%;
+	z-index:1;
+	max-height:675px;
+	overflow: hidden;
+}
+#mainContent #banner .slide img{
+	max-width:100%;
+	height:auto;
+}
+#mainContent #banner .message{
+    position: absolute;
+    z-index: 4;
+}
+#mainContent #banner .overlay{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	z-index:2;
+	height:100%;
+}
+#mainContent #banner .overlay1{
+	background-color:rgba(0,0,0, .3);
+}
+#mainContent #banner .message{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+	display:table;
+    z-index: 4;
+}
+#mainContent #banner .message .wrap{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+#mainContent #banner .message .symbol{
+	border: 4px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    display: block;
+    font-size: 141px;
+    height: 150px;
+    line-height: 122px;
+    margin: 0 auto;
+    width: 150px;
+
+    -webkit-transition: all .01s ease;
+    -moz-transition: all .01s ease;
+    transition: all .01s ease;
+}
+#mainContent #banner .message .symbol-cr{
+	font-size:45px;
+	color:#fff;
+}
+#mainContent #banner .message h2{
+	vertical-align: middle;
+	text-align: center;
+	text-align: center;
+	margin:0 auto;
+	/*font-family: 'Ruslan Display', cursive;*/
+	font-family: 'Freckle Face', cursive;
+	/*font-weight:bold;*/
+	font-size:60px;
+	width:720px;
+	font-weight:bold;
+	padding-top:30px;
+	letter-spacing:-1px;
+	color:#FFF;
+	text-transform:uppercase;
+}
+#mainContent section h1, #mainContent section h2{
+	margin:50px 0;
+	font-size:35px;
+	text-transform:uppercase;
+	font-weight:bold;
+	position:relative;
+	text-align: center;
+}
+#mainContent section:not(#banner){
+	padding:50px 0;
+}
+#mainContent section:not(#banner) h2::first-letter, #mainContent section:not(#banner) h1::first-letter{
+	color:#901621;
+	font-size:40px
+}
+#mainContent section:not(#banner) h2::after, #mainContent section:not(#banner) h1::after{
+	border-top: 6px double #333;
+    content: "";
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 55px;
+    width: 100px;
+}
+#mainContent .latestVideo{
+	padding:28% 25%;
+	position:relative;
+}
+#mainContent .latestVideo #videoLatest{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:none;
+}
+#mainContent #video .other-videos{
+	padding:30% 50%;
+	position:relative;
+}
+#mainContent #video .owl-carousel .owl-nav{
+	left: 0;
+	height:0;
+    position: absolute;
+    top: 87px;
+    width: 100%;
+}
+#mainContent #video .owl-carousel .owl-nav .owl-next{
+	float:right;
+}
+#mainContent #video .owl-carousel .owl-nav .owl-prev {
+    float: left;
+    font-size: 250%;
+    margin-left: -50px;
+    overflow: hidden;
+    position: relative;
+    width: 25px;
+}
+#mainContent #video .owl-carousel .owl-nav .owl-prev::before {
+    content: "\f053";
+    font-family: "FontAwesome";
+}
+#mainContent #video .owl-carousel .owl-nav .owl-next{
+    float: right;
+    font-size: 250%;
+    margin-right: -50px;
+    overflow: hidden;
+    position: relative;
+    width: 25px;
+}
+#mainContent #video .owl-carousel .owl-nav .owl-next::before {
+    content: "\f054";
+    font-family: "FontAwesome";
+}
+#mainContent #otherVideos .owl-carousel .owl-nav div {
+    opacity: 0.5;
+    transition: opacity 0.5s ease 0s;
+}
+#mainContent #video .owl-carousel .owl-nav div:hover {
+    opacity: 1;
+}
+#mainContent #video .videos-item img{
+	max-width:100%;
+	height: auto;	
+}
+#mainContent .resentText h3{
+	margin-top:0;
+}
+#mainContent .resentText p{
+	font-size: 16px;
+}
+#mainContent section#about{
+	position: relative;
+	overflow: hidden;
+	padding: 0;
+}
+#mainContent section#about .about-carousel{ position: absolute; top:0; left:0; height:100%; width:100%; z-index: -1;}
+#mainContent section#about .about-carousel div { position: absolute; z-index: 1; display: none; }
+#mainContent section#about .about-carousel div.active { display: block; z-index: 3; }
+#mainContent section#about .about-carousel div img{
+	max-width: 100%;
+	height:auto;
+}
+#mainContent section#about .about-xplicit{
+	color:#ffffff;
+	position: relative;
+	z-index: 7;
+	padding: 150px 0 200px;
+}
+#mainContent section#about .about-xplicit h2{
+	color:#ffffff;
+}
+#mainContent section#about .about-xplicit h2::first-letter{
+	color: #901621;
+    font-size: 40px;
+}
+#mainContent section#about .about-xplicit h2::after{
+	border-top: 6px double #fff;
+}
+#mainContent section#about .about-xplicit .text-content{
+	position: relative;
+	z-index: 10;
+}
+#mainContent section#about .overlay{
+	position: absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+}
+#mainContent section#about .overlay.overlay1{
+	background-color: rgba(0,0,0, .5);
+}
+
+#mainContent #members img{
+	max-width:100%;
+	height:auto;
+}
+#mainContent #members .wrap{
+	padding-bottom:30px;
+}
+
+#mainContent #social img{
+	max-width:100%;
+	height:auto;
+}
+#mainContent #social .wrap{
+	padding-bottom:30px;
+}
+
+#footer{
+	padding:50px;
+	background-color: #555;
+    background-image: url("../images/header-background.png");
+}
